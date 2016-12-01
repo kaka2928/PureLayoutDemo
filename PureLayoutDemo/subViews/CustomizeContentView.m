@@ -130,7 +130,7 @@
             
             return [constraints copy];
             
-        } targetValues:greenValues isAnimated:NO comlection:^(BOOL success) {
+        } targetValues:greenValues isAnimated:YES comlection:^(BOOL success) {
             NSLog(@"%d",success);
         }];
         
@@ -143,7 +143,7 @@
             NSLog(@"%d",success);
         }];
         NSArray *greenValues = @[@0,@0,@0];
-        [self dismissSubView:self.greenLabel constraints:constraints targetValues:greenValues isAnimated:NO comlection:^(BOOL success) {
+        [self dismissSubView:self.greenLabel constraints:constraints targetValues:greenValues isAnimated:YES comlection:^(BOOL success) {
             
             NSLog(@"%d",success);
         }];

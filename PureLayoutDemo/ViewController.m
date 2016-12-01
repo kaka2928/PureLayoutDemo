@@ -13,7 +13,6 @@
 #import "CustomizeContentView.h"
 #import "AlignArrayContentView.h"
 
-static const NSInteger HEIGHT = 100;
 @interface ViewController ()
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIView *contentView;

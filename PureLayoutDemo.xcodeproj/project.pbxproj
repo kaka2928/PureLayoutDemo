@@ -22,10 +22,10 @@
 		C89063441DD0626B008385C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89063421DD0626B008385C2 /* Main.storyboard */; };
 		C89063461DD0626B008385C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C89063451DD0626B008385C2 /* Assets.xcassets */; };
 		C89063491DD0626B008385C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89063471DD0626B008385C2 /* LaunchScreen.storyboard */; };
-		C890635A1DD062DA008385C2 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C89063521DD062DA008385C2 /* ALView+PureLayout.m */; };
-		C890635B1DD062DA008385C2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C89063541DD062DA008385C2 /* NSArray+PureLayout.m */; };
-		C890635C1DD062DA008385C2 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C89063561DD062DA008385C2 /* NSLayoutConstraint+PureLayout.m */; };
 		C890635F1DD062F0008385C2 /* ClassTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C890635E1DD062F0008385C2 /* ClassTest.m */; };
+		C8F712051DF019B0003DCCE6 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F711FD1DF019B0003DCCE6 /* ALView+PureLayout.m */; };
+		C8F712061DF019B0003DCCE6 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F711FF1DF019B0003DCCE6 /* NSArray+PureLayout.m */; };
+		C8F712071DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F712011DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,17 +57,17 @@
 		C89063451DD0626B008385C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C89063481DD0626B008385C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C890634A1DD0626B008385C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C89063511DD062DA008385C2 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
-		C89063521DD062DA008385C2 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
-		C89063531DD062DA008385C2 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
-		C89063541DD062DA008385C2 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
-		C89063551DD062DA008385C2 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		C89063561DD062DA008385C2 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
-		C89063571DD062DA008385C2 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
-		C89063581DD062DA008385C2 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
-		C89063591DD062DA008385C2 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		C890635D1DD062F0008385C2 /* ClassTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassTest.h; sourceTree = "<group>"; };
 		C890635E1DD062F0008385C2 /* ClassTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassTest.m; sourceTree = "<group>"; };
+		C8F711FC1DF019B0003DCCE6 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		C8F711FD1DF019B0003DCCE6 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		C8F711FE1DF019B0003DCCE6 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		C8F711FF1DF019B0003DCCE6 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		C8F712001DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		C8F712011DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		C8F712021DF019B0003DCCE6 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		C8F712031DF019B0003DCCE6 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		C8F712041DF019B0003DCCE6 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		C81115081DD1A5630094F877 /* CCBasicViews */ = {
 			isa = PBXGroup;
 			children = (
-				C8261BFD1DE834B800EBD343 /* customizedViews */,
+				C8F711FB1DF019B0003DCCE6 /* PureLayout */,
 				C81115021DD1A5340094F877 /* BasicViewController.h */,
 				C81115031DD1A5340094F877 /* BasicViewController.m */,
 				C81115051DD1A5580094F877 /* BasicView.h */,
@@ -121,13 +121,6 @@
 			name = CustomizeContentView;
 			sourceTree = "<group>";
 		};
-		C8261BFD1DE834B800EBD343 /* customizedViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = customizedViews;
-			sourceTree = "<group>";
-		};
 		C890632D1DD0626B008385C2 = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +144,6 @@
 			children = (
 				C8261BDE1DE6E1B400EBD343 /* subViews */,
 				C81115081DD1A5630094F877 /* CCBasicViews */,
-				C89063501DD062DA008385C2 /* PureLayout */,
 				C89063391DD0626B008385C2 /* Supporting Files */,
 				C890635D1DD062F0008385C2 /* ClassTest.h */,
 				C890635E1DD062F0008385C2 /* ClassTest.m */,
@@ -175,20 +167,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C89063501DD062DA008385C2 /* PureLayout */ = {
+		C8F711FB1DF019B0003DCCE6 /* PureLayout */ = {
 			isa = PBXGroup;
 			children = (
-				C89063511DD062DA008385C2 /* ALView+PureLayout.h */,
-				C89063521DD062DA008385C2 /* ALView+PureLayout.m */,
-				C89063531DD062DA008385C2 /* NSArray+PureLayout.h */,
-				C89063541DD062DA008385C2 /* NSArray+PureLayout.m */,
-				C89063551DD062DA008385C2 /* NSLayoutConstraint+PureLayout.h */,
-				C89063561DD062DA008385C2 /* NSLayoutConstraint+PureLayout.m */,
-				C89063571DD062DA008385C2 /* PureLayout+Internal.h */,
-				C89063581DD062DA008385C2 /* PureLayout.h */,
-				C89063591DD062DA008385C2 /* PureLayoutDefines.h */,
+				C8F711FC1DF019B0003DCCE6 /* ALView+PureLayout.h */,
+				C8F711FD1DF019B0003DCCE6 /* ALView+PureLayout.m */,
+				C8F711FE1DF019B0003DCCE6 /* NSArray+PureLayout.h */,
+				C8F711FF1DF019B0003DCCE6 /* NSArray+PureLayout.m */,
+				C8F712001DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.h */,
+				C8F712011DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m */,
+				C8F712021DF019B0003DCCE6 /* PureLayout+Internal.h */,
+				C8F712031DF019B0003DCCE6 /* PureLayout.h */,
+				C8F712041DF019B0003DCCE6 /* PureLayoutDefines.h */,
 			);
-			path = PureLayout;
+			name = PureLayout;
+			path = CCBasicViews/PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,15 +260,15 @@
 				C8261BE11DE6E1D000EBD343 /* AlignContentView.m in Sources */,
 				C890635F1DD062F0008385C2 /* ClassTest.m in Sources */,
 				C890633E1DD0626B008385C2 /* AppDelegate.m in Sources */,
+				C8F712051DF019B0003DCCE6 /* ALView+PureLayout.m in Sources */,
 				C890633B1DD0626B008385C2 /* main.m in Sources */,
 				C81115071DD1A5580094F877 /* BasicView.m in Sources */,
-				C890635A1DD062DA008385C2 /* ALView+PureLayout.m in Sources */,
 				C8261BDD1DE6E1AF00EBD343 /* ContentView.m in Sources */,
 				C8261BFB1DE8332700EBD343 /* CustomizeContentView.m in Sources */,
+				C8F712061DF019B0003DCCE6 /* NSArray+PureLayout.m in Sources */,
+				C8F712071DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				C8261BEF1DE80AC200EBD343 /* AnimationContentView.m in Sources */,
 				C81115041DD1A5340094F877 /* BasicViewController.m in Sources */,
-				C890635B1DD062DA008385C2 /* NSArray+PureLayout.m in Sources */,
-				C890635C1DD062DA008385C2 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				C8261BEC1DE7CFAB00EBD343 /* AlignArrayContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +383,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 261207cc@163.com (6M997NVT48)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PureLayoutDemo",
@@ -413,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 261207cc@163.com (6M997NVT48)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PureLayoutDemo",

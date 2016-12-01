@@ -13,9 +13,7 @@
 - (instancetype)init{
     
     if (self = [super init]) {
-        
-        self.layer.borderColor = [[UIColor blackColor]CGColor];
-        self.layer.borderWidth = 1.0;
+
         [self setupSubViews];
     }
     
@@ -44,7 +42,11 @@
 }
 #pragma mark - API
 #pragma mark - presention
-- (void)presentSubView:(UIView *)subview originalConstraints:(NSArray <NSLayoutConstraint *>* (^)(void))originalConstraints targetValues:(NSArray <NSNumber *>*)values isAnimated:(BOOL)animated comlection:(void (^)(BOOL success))comlection{
+- (void)presentSubView:(UIView *)subview
+   originalConstraints:(NSArray <NSLayoutConstraint *>* (^)(void))originalConstraints
+          targetValues:(NSArray <NSNumber *>*)values
+            isAnimated:(BOOL)animated
+            comlection:(void (^)(BOOL success))comlection{
 
 
     NSTimeInterval animationDuration = (animated)?0.8:0;
@@ -53,8 +55,11 @@
 }
 
 
-- (void)presentSubView:(UIView *)subview originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints targetValue:(CGFloat)value isAnimated:(BOOL)animated comlection:(void (^)(BOOL success))comlection{
-
+- (void)presentSubView:(UIView *)subview
+   originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints
+           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+            comlection:(void (^)(BOOL success))comlection{
+    _NSConcreteStackBlock
     NSTimeInterval animationDuration = (animated)?0.8:0;
     [self presentSubView:subview originalConstraints:originalConstraints targetValue:value isAnimated:animated animationDuration:animationDuration comlection:comlection];
 }
@@ -171,12 +176,19 @@
 #pragma mark - dismiss
 
 // subview 移除以后需要把constraint deactivate掉，因为subview与superview之间的constraint会随着remove失效，但是自身的constraint即使被remove也是无法失效。
-- (void)dismissSubView:(UIView *)subview constraint:(NSLayoutConstraint * )constraint targetValue:(CGFloat)value isAnimated:(BOOL)animated comlection:(void (^)(BOOL success))comlection{
+- (void)dismissSubView:(UIView *)subview
+            constraint:(NSLayoutConstraint * )constraint
+           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+            comlection:(void (^)(BOOL success))comlection{
 
     NSTimeInterval animationDuration = (animated)?0.8:0;
     [self dismissSubView:subview constraint:constraint targetValue:value isAnimated:animated animationDuration:animationDuration comlection:comlection];
 }
-- (void)dismissSubView:(UIView *)subview constraints:(NSArray <NSLayoutConstraint *>*)constraints targetValues:(NSArray <NSNumber *>*)values isAnimated:(BOOL)animated comlection:(void (^)(BOOL success))comlection{
+- (void)dismissSubView:(UIView *)subview
+           constraints:(NSArray <NSLayoutConstraint *>*)constraints
+          targetValues:(NSArray <NSNumber *>*)values
+            isAnimated:(BOOL)animated
+            comlection:(void (^)(BOOL success))comlection{
     
    NSTimeInterval animationDuration = (animated)?0.8:0;
     [self dismissSubView:subview constraints:constraints targetValues:values isAnimated:animated animationDuration:animationDuration comlection:comlection];
