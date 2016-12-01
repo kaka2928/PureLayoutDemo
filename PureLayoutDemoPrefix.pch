@@ -1,0 +1,21 @@
+//
+//  PureLayoutDemoPrefix.pch
+//  PureLayoutDemo
+//
+//  Created by caochao on 16/11/8.
+//  Copyright © 2016年 snailCC. All rights reserved.
+//
+
+#ifndef PureLayoutDemoPrefix_pch
+#define PureLayoutDemoPrefix_pch
+
+
+#import "BasicViewController.h"
+#import "PureLayout.h"
+#import "BasicView.h"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PureLayoutDemoPrefix_pch */
