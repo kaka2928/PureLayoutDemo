@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PinContentView.h"
+#import "TableContentView.h"
 #import "AlignContentView.h"
 #import "AnimationContentView.h"
 #import "CustomizeContentView.h"
@@ -21,6 +22,7 @@
 @property (nonatomic, strong) AlignArrayContentView *alignArrayView;
 @property (nonatomic, strong) AnimationContentView *animationView;
 @property (nonatomic, strong) CustomizeContentView *customizeView;
+@property (nonatomic, strong) TableContentView *tableView;
 @end
 
 @implementation ViewController
@@ -40,6 +42,7 @@
     [self.contentView addSubview:self.alignArrayView];
     [self.contentView addSubview:self.animationView];
     [self.contentView addSubview:self.customizeView];
+    [self.contentView addSubview:self.tableView];
     [self.view setNeedsUpdateConstraints]; // bootstrap Auto Layout
 }
 - (void)viewDidAppear:(BOOL)animated{
@@ -52,7 +55,7 @@
     [self.animationView startAnimation];
     
     self.customizeView.title =@"view加载";
-
+    self.tableView.title =@"tableView加载";
 }
 - (void)updateViewConstraints
 {
@@ -95,7 +98,12 @@
         [self.customizeView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.customizeView];
         
         
-        [self.customizeView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+        [self.tableView autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.customizeView withOffset:20];
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeLeft];
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeRight];
+        [self.tableView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.tableView];
+        
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
         self.didSetupConstraints = YES;
     }
     
@@ -117,7 +125,13 @@
     return _contentView;
 }
 
+- (TableContentView *) tableView{
 
+    if (!_tableView) {
+        _tableView = [TableContentView newAutoLayoutView];
+    }
+    return _tableView;
+}
 - (CustomizeContentView *)customizeView{
 
     if (!_customizeView) {

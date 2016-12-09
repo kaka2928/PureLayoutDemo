@@ -29,9 +29,7 @@
 - (instancetype)init{
     
     if (self = [super init]) {
-        
-        self.layer.borderColor = [[UIColor blackColor]CGColor];
-        self.layer.borderWidth = 1.0;
+
         [self setupSubViews];
     }
     

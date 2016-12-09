@@ -6,16 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PureLayoutDemo/subViews/ContentTableViewCell.m"
+            timestampString = "502970522.588815"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-getRealHeight:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PureLayoutDemo/CCBasicViews/BasicView.m"
-            timestampString = "502274823.201621"
+            filePath = "PureLayoutDemo/subViews/ContentTableViewCell.m"
+            timestampString = "502970522.588815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-presentSubView:originalConstraints:targetValue:isAnimated:animationDuration:comlection:"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-getRealHeight:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

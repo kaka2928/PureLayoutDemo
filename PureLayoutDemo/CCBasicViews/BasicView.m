@@ -59,7 +59,7 @@
    originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints
            targetValue:(CGFloat)value isAnimated:(BOOL)animated
             comlection:(void (^)(BOOL success))comlection{
-    _NSConcreteStackBlock
+    
     NSTimeInterval animationDuration = (animated)?0.8:0;
     [self presentSubView:subview originalConstraints:originalConstraints targetValue:value isAnimated:animated animationDuration:animationDuration comlection:comlection];
 }
