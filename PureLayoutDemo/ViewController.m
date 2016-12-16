@@ -33,8 +33,8 @@
 }
 - (void)loadView
 {
-    self.view = [UIView new];
-    
+
+    [super loadView];
     [self.view addSubview:self.scrollView];
     [self.scrollView addSubview:self.contentView];
     [self.contentView addSubview:self.alignView];
@@ -43,7 +43,7 @@
     [self.contentView addSubview:self.animationView];
     [self.contentView addSubview:self.customizeView];
     [self.contentView addSubview:self.tableView];
-    [self.view setNeedsUpdateConstraints]; // bootstrap Auto Layout
+    
 }
 - (void)viewDidAppear:(BOOL)animated{
 
@@ -104,7 +104,6 @@
         [self.tableView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.tableView];
         
         [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-        self.didSetupConstraints = YES;
     }
     
     [super updateViewConstraints];

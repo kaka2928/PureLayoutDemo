@@ -1,0 +1,26 @@
+autolayoutDemo总结
+
+1.autolayout
+1.1. layout的各种使用：pin、match、align等布局方式的使用；
+
+
+
+2. OC中class继承与方法重写关系：子类中复写一个方法后，会覆盖父类的方法，所以使用［super method］进行父类方法调用，子类继承父类的方法后，在父类的基础上进行扩展，清晰出各个级别类方法的执行，同时体现出继承与发展的处理。
+
+3. OC中block的使用，block是独立的代码段，可以有输入、输出。
+3.1 block可以作为两种流程间交替执行的一种方法；
+3.2 子类中通过block在父类方法中插入片段代码执行；
+
+4. autolayout基础类抽象
+4.1 BasicViewController 是viewController基类，实现viewController中自动布局的基础方法；
+4.1.1 子类中loadView、updateConstraints 需要执行super的方法；
+
+4.2 BasicView是view基类，实现view中自动布局的基础方法，同时进行扩展出viewcontroller push的方法；
+4.3.1 子类中重写setupSubViews方法，添加cell自己的subviews；
+4.2.2 子类中updateConstraints需要执行super的方法；
+4.2.3 扩展出subview的present、dismiss方法，类似viewcontroller方法，用于动态加载subview；
+
+4.3 BasicTableViewCell是tableViewCell基类，实现cell中自动布局的基础方法，添加获取cell实际高度接口；
+4.3.1 子类中重写setupSubViews方法，添加cell自己的subviews；
+4.3.2 子类中layoutSubviews、info、updateConstraints 要调用super方法
+4.3.3 获取cell填充内容后的实际高度：vertical方向cell中subviews进行pin布局，给定cell宽度，自动计算出合适高度

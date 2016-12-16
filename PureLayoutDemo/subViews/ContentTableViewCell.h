@@ -6,10 +6,8 @@
 //  Copyright © 2016年 snailCC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BasicTableViewCell.h"
 
-@interface ContentTableViewCell : UITableViewCell
-- (CGFloat)getRealHeight:(CGFloat)tableviewWidth;
-@property (nonatomic,assign) BOOL didSetupConstraints;
-@property (nonatomic,retain) NSDictionary *info;
+@interface ContentTableViewCell : BasicTableViewCell
+
 @end

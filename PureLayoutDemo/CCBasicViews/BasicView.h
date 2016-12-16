@@ -25,15 +25,16 @@ typedef NS_ENUM(NSInteger, BasicViewPresentationDirection) {
  子view加载
  
  @param subview 子view
- @param originalConstraints 子view初始化constraints，block返回目标改变的constraint
+ @param originalConstraint 子view初始化constraint，block返回目标改变的constraint
  @param value 目标constraint 的目标值
  @param animated 是否动画
  @param animationDuration 动画时间，动画时间默认0.8
  @param comlection 加载完成的block回调
  */
 - (void)presentSubView:(UIView *)subview
-   originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints
-           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+    originalConstraint:(NSLayoutConstraint * (^)(void))originalConstraint
+           targetValue:(CGFloat)value
+            isAnimated:(BOOL)animated
      animationDuration:(NSTimeInterval)animationDuration
             comlection:(void (^)(BOOL success))comlection;
 /**
@@ -57,14 +58,15 @@ typedef NS_ENUM(NSInteger, BasicViewPresentationDirection) {
  子view加载，动画时间默认0.8
  
  @param subview 子view
- @param originalConstraints 子view初始化constraints，block返回目标改变的constraint
+ @param originalConstraint 子view初始化constraint，block返回目标改变的constraint
  @param value 目标constraint 的目标值
  @param animated 是否动画
  @param comlection 加载完成的block回调
  */
 - (void)presentSubView:(UIView *)subview
-   originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints
-           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+    originalConstraint:(NSLayoutConstraint * (^)(void))originalConstraint
+           targetValue:(CGFloat)value
+            isAnimated:(BOOL)animated
             comlection:(void (^)(BOOL success))comlection;
 
 /**
@@ -128,7 +130,8 @@ typedef NS_ENUM(NSInteger, BasicViewPresentationDirection) {
  */
 - (void)dismissSubView:(UIView *)subview
             constraint:(NSLayoutConstraint * )constraint
-           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+           targetValue:(CGFloat)value
+            isAnimated:(BOOL)animated
             comlection:(void (^)(BOOL success))comlection;
 
 /**

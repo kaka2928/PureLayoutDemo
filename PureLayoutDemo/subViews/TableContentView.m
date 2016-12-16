@@ -11,8 +11,8 @@
 
 @interface TableContentView(){
 
-    NSArray *_dataSource;
-    NSArray *_identifiers;
+    NSMutableArray *_dataSource;
+    NSString *_identifier;
 }
 
 @property (nonatomic,retain) UITableView *tableView;
@@ -26,12 +26,38 @@
     if (self = [super init]) {
         
         [self setupSubViews];
-        _dataSource = @[@{@"title":@"cell_0",@"content":@"++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"},
-                        @{@"title":@"cell_1",@"content":@"****************"}];
-        _identifiers=@[@"contentCell_0",@"contentCell_0"];
+        _dataSource = [NSMutableArray new];
+        NSInteger count = 6;
+        for (int i= 0; i<count; i++) {
+            NSMutableDictionary *cellInfo = [NSMutableDictionary new];
+            [cellInfo setObject:[NSString stringWithFormat:@"cell_%d",i] forKey:@"title"];
+            [cellInfo setObject:[self randomLorumIpsum] forKey:@"content"];
+            [_dataSource addObject:cellInfo];
+        }
+
+        _identifier=@"ContentTableViewCell";
     }
     
     return self;
+}
+- (NSString *)randomLorumIpsum {
+    
+    NSString *lorumIpsum = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non quam ac massa viverra semper. Maecenas mattis justo ac augue volutpat congue. Maecenas laoreet, nulla eu faucibus gravida, felis orci dictum risus, sed sodales sem eros eget risus. Morbi imperdiet sed diam et sodales. Vestibulum ut est id mauris ultrices gravida. Nulla malesuada metus ut erat malesuada, vitae ornare neque semper. Aenean a commodo justo, vel placerat odio. Curabitur vitae consequat tortor. Aenean eu magna ante. Integer tristique elit ac augue laoreet, eget pulvinar lacus dictum. Cras eleifend lacus eget pharetra elementum. Etiam fermentum eu felis eu tristique. Integer eu purus vitae turpis blandit consectetur. Nulla facilisi. Praesent bibendum massa eu metus pulvinar, quis tristique nunc commodo. Ut varius aliquam elit, a tincidunt elit aliquam non. Nunc ac leo purus. Proin condimentum placerat ligula, at tristique neque scelerisque ut. Suspendisse ut congue enim. Integer id sem nisl. Nam dignissim, lectus et dictum sollicitudin, libero augue ullamcorper justo, nec consectetur dolor arcu sed justo. Proin rutrum pharetra lectus, vel gravida ante venenatis sed. Mauris lacinia urna vehicula felis aliquet venenatis. Suspendisse non pretium sapien. Proin id dolor ultricies, dictum augue non, euismod ante. Vivamus et luctus augue, a luctus mi. Maecenas sit amet felis in magna vestibulum viverra vel ut est. Suspendisse potenti. Morbi nec odio pretium lacus laoreet volutpat sit amet at ipsum. Etiam pretium purus vitae tortor auctor, quis cursus metus vehicula. Integer ultricies facilisis arcu, non congue orci pharetra quis. Vivamus pulvinar ligula neque, et vehicula ipsum euismod quis.";
+    
+    // Split lorum ipsum words into an array
+    //
+    NSArray *lorumIpsumArray = [lorumIpsum componentsSeparatedByString:@" "];
+    
+    // Randomly choose words for variable length
+    //
+    int r = arc4random() % [lorumIpsumArray count];
+    r = MAX(3, r); // no less than 3 words
+    NSArray *lorumIpsumRandom = [lorumIpsumArray objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, r)]];
+    
+    // Array to string. Adding '!!!' to end of string to ensure all text is visible.
+    //
+    return [NSString stringWithFormat:@"%@!!!", [lorumIpsumRandom componentsJoinedByString:@" "]];
+    
 }
 #pragma mark - Setup
 
@@ -48,6 +74,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+        _tableView.estimatedRowHeight = UITableViewAutomaticDimension;
+        
     }
     return _tableView;
 }
@@ -57,8 +85,10 @@
 {
     if (!self.didSetupConstraints)
     {
-        
-        [self.tableView autoPinEdgesToSuperviewEdges];
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:40];
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
+        [self.tableView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
     }
     [super updateConstraints];
     
@@ -68,35 +98,36 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
 
-    return 1;
+    return [_dataSource count];
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSString *identifier = _identifiers[indexPath.row];
-    ContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+
+    ContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:_identifier];
     if (cell == nil) {
         cell = [[ContentTableViewCell alloc]init];
-        [tableView registerClass:[cell class] forCellReuseIdentifier:identifier];
-        
+        [tableView registerClass:[ContentTableViewCell class] forCellReuseIdentifier:_identifier];
     }
     cell.info = _dataSource[indexPath.row];
+
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    
-    NSString *identifier = _identifiers[indexPath.row];
     CGFloat height = 0;
-    if ([identifier isEqualToString:@"contentCell_0"]) {
-        ContentTableViewCell *cell = [[ContentTableViewCell alloc]init];
-        cell.info = _dataSource[indexPath.row];
-        height = [cell getRealHeight:CGRectGetWidth(tableView.bounds)];
-    }
-
+    ContentTableViewCell *cell =[[ContentTableViewCell alloc]init];
+    cell.info = _dataSource[indexPath.row];
+    height = [cell realCellHeight:CGRectGetWidth(tableView.bounds)];
+//              CGSizeMake(CGRectGetWidth(tableView.bounds), CGRectGetHeight(cell.bounds))];
+    
     return height;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    ContentTableViewCell *cell = (ContentTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    NSLog(@"%@",cell.info);
 }
 @end

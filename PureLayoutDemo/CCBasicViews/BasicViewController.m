@@ -21,10 +21,10 @@
 }
 - (void)loadView
 {
+    [super loadView];
     self.view = [UIView new];
-
-    
     [self.view setNeedsUpdateConstraints]; // bootstrap Auto Layout
+    
 }
 
 - (void)updateViewConstraints

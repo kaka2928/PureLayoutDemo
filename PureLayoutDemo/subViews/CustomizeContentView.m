@@ -95,7 +95,7 @@
 
     
     if (sender.tag == 0) {
-        [self presentSubView:self.blueLabel originalConstraints:^NSLayoutConstraint *{
+        [self presentSubView:self.blueLabel originalConstraint:^NSLayoutConstraint *{
             
             leftConstraint =[self.blueLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self];
             [self.blueLabel autoPinEdgeToSuperviewEdge:ALEdgeTop];
@@ -104,7 +104,7 @@
             NSLog(@"%d",success);
         }];
         
-        [self presentSubView:self.yellowLabel originalConstraints:^NSLayoutConstraint *{
+        [self presentSubView:self.yellowLabel originalConstraint:^NSLayoutConstraint *{
             bottomConstraint = [self.yellowLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self];
             [self.yellowLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
             return bottomConstraint;

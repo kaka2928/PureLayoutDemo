@@ -19,6 +19,7 @@
 		C8261BFB1DE8332700EBD343 /* CustomizeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8261BFA1DE8332700EBD343 /* CustomizeContentView.m */; };
 		C843A6311DF55FAA00613069 /* TableContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C843A6301DF55FAA00613069 /* TableContentView.m */; };
 		C843A6351DF5612100613069 /* ContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C843A6341DF5612100613069 /* ContentTableViewCell.m */; };
+		C870F0891E0245A900AA8CC7 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C870F0881E0245A900AA8CC7 /* BasicTableViewCell.m */; };
 		C890633B1DD0626B008385C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C890633A1DD0626B008385C2 /* main.m */; };
 		C890633E1DD0626B008385C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C890633D1DD0626B008385C2 /* AppDelegate.m */; };
 		C89063441DD0626B008385C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C89063421DD0626B008385C2 /* Main.storyboard */; };
@@ -55,6 +56,8 @@
 		C843A6301DF55FAA00613069 /* TableContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableContentView.m; path = subViews/TableContentView.m; sourceTree = "<group>"; };
 		C843A6331DF5612100613069 /* ContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentTableViewCell.h; path = subViews/ContentTableViewCell.h; sourceTree = "<group>"; };
 		C843A6341DF5612100613069 /* ContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentTableViewCell.m; path = subViews/ContentTableViewCell.m; sourceTree = "<group>"; };
+		C870F0871E0245A900AA8CC7 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicTableViewCell.h; path = CCBasicViews/BasicTableViewCell.h; sourceTree = "<group>"; };
+		C870F0881E0245A900AA8CC7 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicTableViewCell.m; path = CCBasicViews/BasicTableViewCell.m; sourceTree = "<group>"; };
 		C89063361DD0626B008385C2 /* PureLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PureLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C890633A1DD0626B008385C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C890633C1DD0626B008385C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				C81115031DD1A5340094F877 /* BasicViewController.m */,
 				C81115051DD1A5580094F877 /* BasicView.h */,
 				C81115061DD1A5580094F877 /* BasicView.m */,
+				C870F0871E0245A900AA8CC7 /* BasicTableViewCell.h */,
+				C870F0881E0245A900AA8CC7 /* BasicTableViewCell.m */,
 			);
 			name = CCBasicViews;
 			sourceTree = "<group>";
@@ -139,10 +144,18 @@
 			name = TableContentView;
 			sourceTree = "<group>";
 		};
-		C890632D1DD0626B008385C2 = {
+		C870F08D1E026DA100AA8CC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C8261BE21DE6E4E300EBD343 /* Reveal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C890632D1DD0626B008385C2 = {
+			isa = PBXGroup;
+			children = (
+				C870F08D1E026DA100AA8CC7 /* Frameworks */,
 				C811150D1DD1A6C90094F877 /* PureLayoutDemoPrefix.pch */,
 				C89063381DD0626B008385C2 /* PureLayoutDemo */,
 				C89063371DD0626B008385C2 /* Products */,
@@ -283,6 +296,7 @@
 				C890633B1DD0626B008385C2 /* main.m in Sources */,
 				C81115071DD1A5580094F877 /* BasicView.m in Sources */,
 				C8261BDD1DE6E1AF00EBD343 /* ContentView.m in Sources */,
+				C870F0891E0245A900AA8CC7 /* BasicTableViewCell.m in Sources */,
 				C8261BFB1DE8332700EBD343 /* CustomizeContentView.m in Sources */,
 				C8F712061DF019B0003DCCE6 /* NSArray+PureLayout.m in Sources */,
 				C843A6311DF55FAA00613069 /* TableContentView.m in Sources */,

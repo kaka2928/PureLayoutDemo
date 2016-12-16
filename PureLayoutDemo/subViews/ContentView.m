@@ -30,7 +30,6 @@
 #pragma mark - Setup
 - (void)setupSubViews{
 
-    [super setupSubViews];
     [self addSubview:self.titleLabel];
 }
 #pragma mark - subviews

@@ -56,23 +56,25 @@
 
 
 - (void)presentSubView:(UIView *)subview
-   originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints
-           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+    originalConstraint:(NSLayoutConstraint * (^)(void))originalConstraint
+           targetValue:(CGFloat)value
+            isAnimated:(BOOL)animated
             comlection:(void (^)(BOOL success))comlection{
     
     NSTimeInterval animationDuration = (animated)?0.8:0;
-    [self presentSubView:subview originalConstraints:originalConstraints targetValue:value isAnimated:animated animationDuration:animationDuration comlection:comlection];
+    [self presentSubView:subview originalConstraint:originalConstraint targetValue:value isAnimated:animated animationDuration:animationDuration comlection:comlection];
 }
 - (void)presentSubView:(UIView *)subview
-   originalConstraints:(NSLayoutConstraint * (^)(void))originalConstraints
-           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+    originalConstraint:(NSLayoutConstraint * (^)(void))originalConstraint
+           targetValue:(CGFloat)value
+            isAnimated:(BOOL)animated
      animationDuration:(NSTimeInterval)animationDuration
             comlection:(void (^)(BOOL success))comlection{
 
     animationDuration = (animated)?animationDuration:0;
     if (![[self subviews] containsObject:subview]) {
         [self addSubview:subview];
-        NSLayoutConstraint *targetConstraint = originalConstraints();
+        NSLayoutConstraint *targetConstraint = originalConstraint();
         
         [self layoutSubviews];
         
@@ -178,7 +180,8 @@
 // subview 移除以后需要把constraint deactivate掉，因为subview与superview之间的constraint会随着remove失效，但是自身的constraint即使被remove也是无法失效。
 - (void)dismissSubView:(UIView *)subview
             constraint:(NSLayoutConstraint * )constraint
-           targetValue:(CGFloat)value isAnimated:(BOOL)animated
+           targetValue:(CGFloat)value
+            isAnimated:(BOOL)animated
             comlection:(void (^)(BOOL success))comlection{
 
     NSTimeInterval animationDuration = (animated)?0.8:0;
