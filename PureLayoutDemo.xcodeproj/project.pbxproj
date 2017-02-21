@@ -29,6 +29,7 @@
 		C8F712051DF019B0003DCCE6 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F711FD1DF019B0003DCCE6 /* ALView+PureLayout.m */; };
 		C8F712061DF019B0003DCCE6 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F711FF1DF019B0003DCCE6 /* NSArray+PureLayout.m */; };
 		C8F712071DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F712011DF019B0003DCCE6 /* NSLayoutConstraint+PureLayout.m */; };
+		C8FEB2D11E5C33C5009AE25B /* UIView+Presentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FEB2D01E5C33C5009AE25B /* UIView+Presentation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,8 @@
 		C8F712021DF019B0003DCCE6 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
 		C8F712031DF019B0003DCCE6 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
 		C8F712041DF019B0003DCCE6 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		C8FEB2CF1E5C33C5009AE25B /* UIView+Presentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Presentation.h"; path = "CCBasicViews/UIView+Presentation.h"; sourceTree = "<group>"; };
+		C8FEB2D01E5C33C5009AE25B /* UIView+Presentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Presentation.m"; path = "CCBasicViews/UIView+Presentation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 		C81115081DD1A5630094F877 /* CCBasicViews */ = {
 			isa = PBXGroup;
 			children = (
+				C8FEB2CF1E5C33C5009AE25B /* UIView+Presentation.h */,
+				C8FEB2D01E5C33C5009AE25B /* UIView+Presentation.m */,
 				C8F711FB1DF019B0003DCCE6 /* PureLayout */,
 				C81115021DD1A5340094F877 /* BasicViewController.h */,
 				C81115031DD1A5340094F877 /* BasicViewController.m */,
@@ -287,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8261BE61DE7059B00EBD343 /* PinContentView.m in Sources */,
+				C8FEB2D11E5C33C5009AE25B /* UIView+Presentation.m in Sources */,
 				C811150B1DD1A57D0094F877 /* ViewController.m in Sources */,
 				C8261BE11DE6E1D000EBD343 /* AlignContentView.m in Sources */,
 				C843A6351DF5612100613069 /* ContentTableViewCell.m in Sources */,

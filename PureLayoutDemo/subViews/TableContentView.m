@@ -27,7 +27,7 @@
         
         [self setupSubViews];
         _dataSource = [NSMutableArray new];
-        NSInteger count = 6;
+        NSInteger count = 20;
         for (int i= 0; i<count; i++) {
             NSMutableDictionary *cellInfo = [NSMutableDictionary new];
             [cellInfo setObject:[NSString stringWithFormat:@"cell_%d",i] forKey:@"title"];

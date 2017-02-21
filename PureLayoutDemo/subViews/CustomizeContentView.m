@@ -7,7 +7,7 @@
 //
 
 #import "CustomizeContentView.h"
-
+#import "UIView+Presentation.h"
 @interface CustomizeContentView(){
 
     __block NSLayoutConstraint *leftConstraint;
@@ -95,20 +95,21 @@
 
     
     if (sender.tag == 0) {
+
         [self presentSubView:self.blueLabel originalConstraint:^NSLayoutConstraint *{
-            
             leftConstraint =[self.blueLabel autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self];
             [self.blueLabel autoPinEdgeToSuperviewEdge:ALEdgeTop];
             return leftConstraint;
-        } targetValue:300 isAnimated:YES comlection:^(BOOL success) {
+        } targetValue:300 isAnimated:YES isSpring:YES complection:^(BOOL success) {
             NSLog(@"%d",success);
         }];
+
         
         [self presentSubView:self.yellowLabel originalConstraint:^NSLayoutConstraint *{
             bottomConstraint = [self.yellowLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self];
             [self.yellowLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
             return bottomConstraint;
-        } targetValue:-200 isAnimated:YES comlection:^(BOOL success) {
+        } targetValue:-200 isAnimated:YES isSpring:YES complection:^(BOOL success) {
             NSLog(@"%d",success);
         }];
         
@@ -128,20 +129,20 @@
             
             return [constraints copy];
             
-        } targetValues:greenValues isAnimated:YES comlection:^(BOOL success) {
+        } targetValues:greenValues isAnimated:YES isSpring:NO complection:^(BOOL success) {
             NSLog(@"%d",success);
         }];
         
     }else{
     
-        [self dismissSubView:self.blueLabel constraint:leftConstraint targetValue:0 isAnimated:YES comlection:^(BOOL success) {
+        [self dismissSubView:self.blueLabel constraint:leftConstraint targetValue:0 isAnimated:YES isSpring:YES  complection:^(BOOL success) {
             NSLog(@"%d",success);
         }];
-        [self dismissSubView:self.yellowLabel constraint:bottomConstraint targetValue:0 isAnimated:YES comlection:^(BOOL success) {
+        [self dismissSubView:self.yellowLabel constraint:bottomConstraint targetValue:0 isAnimated:YES  isSpring:YES complection:^(BOOL success) {
             NSLog(@"%d",success);
         }];
         NSArray *greenValues = @[@0,@0,@0];
-        [self dismissSubView:self.greenLabel constraints:constraints targetValues:greenValues isAnimated:YES comlection:^(BOOL success) {
+        [self dismissSubView:self.greenLabel constraints:constraints targetValues:greenValues isAnimated:YES isSpring:NO  complection:^(BOOL success) {
             
             NSLog(@"%d",success);
         }];
